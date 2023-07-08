@@ -4,11 +4,11 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: "/proxy/:slug*",
+        source: "/:slug*",
         destination: "https://api.openai.com/:slug*",
       },
       {
-        source: "/proxy-sse/:slug*",
+        source: "/sse/:slug*",
         destination: "/api/proxy-sse?path=:slug*",
       },
     ];
