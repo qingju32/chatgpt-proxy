@@ -12,8 +12,8 @@ export default function Home() {
 
   useEffect(() => {
     const { origin } = location;
-    setLink(`${origin}/proxy`);
-    setLinkSSE(`${origin}/proxy-sse`);
+    setLink(`${origin}`);
+    setLinkSSE(`${origin}/sse`);
     const clipboard = new ClipboardJS("#copy");
     clipboard.on("success", notify);
     return () => clipboard.destroy();
